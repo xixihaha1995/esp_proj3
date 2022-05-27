@@ -6,7 +6,7 @@ def saveJSON(data, name):
 
 def loadJSONFromOutputs(name):
     script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
-    with open(os.path.join(script_dir, '../py_ep_outputs',name + '.json'), 'w+') as f:
+    with open(os.path.join(script_dir, '../py_ep_outputs',name + '.json'), 'r') as f:
         try:
             testDict = json.loads(f.read())
         except json.decoder.JSONDecodeError:
