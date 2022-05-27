@@ -2405,10 +2405,6 @@
 
   ZoneList,
     EntireBuilding,          !- Name
-    Basement,
-    Core_bottom,
-    Core_mid,
-    Core_top,
     Perimeter_bot_ZN_3,
     Perimeter_bot_ZN_2,
     Perimeter_bot_ZN_1,
@@ -2420,14 +2416,7 @@
     Perimeter_top_ZN_3,
     Perimeter_top_ZN_2,
     Perimeter_top_ZN_1,
-    Perimeter_top_ZN_4,
-    GroundFloor_Plenum,
-    MidFloor_Plenum,
-    TopFloor_Plenum,
-    DataCenter_bot_ZN_6,
-    DataCenter_basement_ZN_6, !- Zone 1 Name
-    DataCenter_top_ZN_6, !- Zone 2 Name
-DataCenter_mid_ZN_6; !- Zone 3 Name
+    Perimeter_top_ZN_4;
 !-   ===========  ALL OBJECTS IN CLASS: BUILDINGSURFACE:DETAILED ===========
                                         !- X,Y,Z  1 {m}
                                         !- X,Y,Z  2 {m}
