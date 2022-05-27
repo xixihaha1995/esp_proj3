@@ -2402,7 +2402,12 @@
     -2.439,                  !- Z Origin {m}
     ,                        !- Type
     1;                       !- Multiplier
-
+    
+  ZoneList,
+    EntireBuilding,          !- Name
+    DataCenter_basement_ZN_6,           !- Zone 1 Name
+    DataCenter_top_ZN_6,         !- Zone 2 Name
+    DataCenter_mid_ZN_6;           !- Zone 3 Name
 !-   ===========  ALL OBJECTS IN CLASS: BUILDINGSURFACE:DETAILED ===========
                                         !- X,Y,Z  1 {m}
                                         !- X,Y,Z  2 {m}
