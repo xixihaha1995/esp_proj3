@@ -28,20 +28,20 @@ ax2 = ax1.twinx()
 
 ax1.plot(x_date,np.array(result['oat'][drop_warmup:]) , color = next(colorcycler), linestyle = next(linecycler),
          label = "Outdoor air temperature [C]",linewidth = line_width)
-# ax2.plot(x_date, result['elec_hvac'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
-#          label = "Electricity:HVAC [J]",linewidth = line_width)
+ax2.plot(x_date, result['elec_hvac'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
+         label = "Electricity:HVAC [J]",linewidth = line_width)
 # ax2.plot(x_date, result['solar'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
 #          label = "Direct Solar Radiation Rate per Area [W/m2]",linewidth = line_width)
-ax2.plot(x_date, result['zone_load'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
-         label = "Entire building heating-cooling load rate [W]",linewidth = line_width)
+# ax2.plot(x_date, result['zone_load'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
+#          label = "Entire building heating-cooling load rate [W]",linewidth = line_width)
 # plt.ylabel("Zone Air System Sensible Cooling Rate (W)",fontsize=large_font)
 plt.tick_params(axis='both', which='major', labelsize=large_font)
 
 ax1.set_ylabel("Temperature [C]",fontsize=large_font)
-# ax2.set_ylabel("Electricity [J]",fontsize=large_font)
+ax2.set_ylabel("Electricity [J]",fontsize=large_font)
 # ax2.set_ylabel("Solar Radiation [W/m2]",fontsize=large_font)
-ax2.set_ylabel("Load rate [W]",fontsize=large_font)
+# ax2.set_ylabel("Load rate [W]",fontsize=large_font)
 h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
-ax1.legend(h1 + h2, l1 + l2)
+ax1.legend(h1 + h2, l1 + l2, prop={'size': large_font})
 plt.show()
