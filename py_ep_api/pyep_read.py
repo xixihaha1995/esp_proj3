@@ -1,41 +1,34 @@
-import sys, os, json
+import sys, _0_util as util
 sys.path.insert(0, 'C:\EnergyPlusV22-1-0')
 
 from pyenergyplus.api import EnergyPlusAPI
 one_time = True
 outdoor_temp_sensor = 0
 outdoor_dew_point_actuator = 0
-zone_cool = []
+oat_lst = []
+ele_hvac_lst = []
 def time_step_handler(state):
-    global one_time , outdoor_temp_sensor, zoon_cool_sensor, elec_hvac
+    global one_time , oat_handle,  elec_hvac_handle, zoon_cool_sensor
     if one_time:
         if not api.exchange.api_data_fully_ready(state):
             return
-        outdoor_temp_sensor = api.exchange.get_variable_handle(
+        oat_handle = api.exchange.get_variable_handle(
             state, u"SITE OUTDOOR AIR DRYBULB TEMPERATURE", u"ENVIRONMENT")
-        elec_hvac = api.exchange.get_meter_handle(state, "Electricity:HVAC")
+        elec_hvac_handle = api.exchange.get_meter_handle(state, "Electricity:HVAC")
+        # zoon_cool_sensor = api.exchange.get_variable_handle(state, u"Zone Air System Sensible Cooling Rate", u"SPACE1-1")
         one_time = False
-    oa_temp = api.exchange.get_variable_value(state, outdoor_temp_sensor)
-    zone_cool_rate = api.exchange.get_meter_value(state, elec_hvac)
-    zone_cool.append(zone_cool_rate)
-
-def saveJSON(data, name):
-    script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
-    with open(os.path.join(script_dir, 'pyep_outputs',name + '.json'), 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
-def loadJSONFromOutputs(name):
-    script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
-    with open(os.path.join(script_dir, 'pyep_outputs',name + '.json'), 'r') as f:
-        testDict = json.loads(f.read())
-    return testDict
+    oat_val = api.exchange.get_variable_value(state, oat_handle)
+    elec_hvac_value = api.exchange.get_meter_value(state, elec_hvac_handle)
+    oat_lst.append(oat_val)
+    ele_hvac_lst.append(elec_hvac_value)
 
 api = EnergyPlusAPI()
 state = api.state_manager.new_state()
 api.runtime.callback_end_zone_timestep_after_zone_reporting(state, time_step_handler)
 api.runtime.run_energyplus(state, sys.argv[1:])
-print(zone_cool)
-# result = loadJSONFromOutputs('pyep_results')
-# result["changed"] = zone_cool
-# saveJSON(result, "pyep_results")
+print(len(ele_hvac_lst))
+result = util.loadJSONFromOutputs('pyep_results')
+result["oat"] = oat_lst
+result["elec_hvac"] = ele_hvac_lst
+util.saveJSON(result, "pyep_results")
 

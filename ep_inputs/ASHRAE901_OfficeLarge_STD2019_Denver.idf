@@ -17025,9 +17025,9 @@
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
-  Output:Meter:MeterFileOnly,InteriorLights:Electricity,Hourly;
-  Output:Meter:MeterFileOnly,InteriorEquipment:Electricity,Hourly;
-  Output:Meter:MeterFileOnly,Electricity:HVAC,Hourly;
+  Output:Meter:MeterFileOnly,InteriorLights:Electricity,timestep;
+  Output:Meter:MeterFileOnly,InteriorEquipment:Electricity,timestep;
+  Output:Meter:MeterFileOnly,Electricity:HVAC,timestep;
 
 !-   ===========  ALL OBJECTS IN CLASS: METER:CUSTOM ===========
 
