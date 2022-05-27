@@ -30,7 +30,9 @@ ax1.plot(x_date,np.array(result['oat'][drop_warmup:]) , color = next(colorcycler
          label = "Outdoor air temperature [C]",linewidth = line_width)
 # ax2.plot(x_date, result['elec_hvac'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
 #          label = "Electricity:HVAC [J]",linewidth = line_width)
-ax2.plot(x_date, result['solar'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
+# ax2.plot(x_date, result['solar'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
+#          label = "Direct Solar Radiation Rate per Area [W/m2]",linewidth = line_width)
+ax2.plot(x_date, result['zone_cool'][drop_warmup:],color = next(colorcycler), linestyle = next(linecycler),
          label = "Direct Solar Radiation Rate per Area [W/m2]",linewidth = line_width)
 # plt.ylabel("Zone Air System Sensible Cooling Rate (W)",fontsize=large_font)
 plt.tick_params(axis='both', which='major', labelsize=large_font)

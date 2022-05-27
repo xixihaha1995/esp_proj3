@@ -10,7 +10,7 @@ ele_hvac_lst = []
 solar_lst = []
 zone_cool_lst = []
 def time_step_handler(state):
-    global one_time , oat_handle,  elec_hvac_handle, solar_handle, zoon_cool_handle
+    global one_time , oat_handle,  elec_hvac_handle, solar_handle, zoon_cool_handle, zone_heat_handle
     if one_time:
         if not api.exchange.api_data_fully_ready(state):
             return
@@ -20,7 +20,7 @@ def time_step_handler(state):
         solar_handle = api.exchange.get_variable_handle(
             state, u"Site Direct Solar Radiation Rate per Area", u"ENVIRONMENT")
         zoon_cool_handle = api.exchange.get_variable_handle(
-            state, u"Zone List Sensible Cooling Energy", u"EntireBuilding")
+            state, u"Zone List Sensible Cooling Rate", u"EntireBuilding")
         one_time = False
     oat_val = api.exchange.get_variable_value(state, oat_handle)
     elec_hvac_value = api.exchange.get_meter_value(state, elec_hvac_handle)
@@ -33,13 +33,13 @@ def time_step_handler(state):
 api = EnergyPlusAPI()
 state = api.state_manager.new_state()
 api.runtime.callback_end_zone_timestep_after_zone_reporting(state, time_step_handler)
-api.exchange.request_variable(state, "Zone List Sensible Cooling Energy", "EntireBuilding")
+api.exchange.request_variable(state, "Zone List Sensible Cooling Rate", "EntireBuilding")
 api.runtime.run_energyplus(state, sys.argv[1:])
 result = util.loadJSONFromOutputs('pyep_results')
 result["oat"] = oat_lst
 result["elec_hvac"] = ele_hvac_lst
 result["solar"] = solar_lst
 result["zone_cool"] = zone_cool_lst
-print(zone_cool_lst)
+print(len(zone_cool_lst))
 util.saveJSON(result, "pyep_results")
 
