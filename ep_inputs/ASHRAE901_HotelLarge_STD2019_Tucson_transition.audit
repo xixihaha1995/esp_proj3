@@ -1,0 +1,80 @@
+
+Conversion 9.0 => 9.1
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
+   ** Warning ** Object=Sizing:System, name=VAV WITH REHEAT, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:System, name=FLR_3_DOAS, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** IP: IDF line~9910 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9916 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9922 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9928 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9934 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9940 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9946 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9952 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9958 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+
+Conversion 9.1 => 9.2
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
+   ** Warning ** IP: IDF line~9633 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9639 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9645 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9651 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9657 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9663 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9669 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9675 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9681 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+
+Conversion 9.2 => 9.3
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
+   ** Warning ** IP: IDF line~9633 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9639 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9645 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9651 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9657 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9663 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9669 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9675 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+   ** Warning ** IP: IDF line~9681 Obsolete object=AirTerminal:SingleDuct:Uncontrolled, encountered.  Should be replaced with new object=AirTerminal:SingleDuct:ConstantVolume:NoReheat
+
+Conversion 9.3 => 9.4
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
+
+Conversion 9.4 => 9.5
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
+
+Conversion 9.5 => 9.6
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
+
+Conversion 9.6 => 22.1
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- C:\Users\wulic\Documents\GitHub\esp_proj3\ep_inputs\ASHRAE901_HotelLarge_STD2019_Tucson.idf
