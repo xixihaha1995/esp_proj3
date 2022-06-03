@@ -14,7 +14,6 @@ df['dayofmonth'] = df.apply(lambda x: x['timestamp'].day, axis=1)
 df['month'] = df.apply(lambda x: x['timestamp'].month, axis=1)
 new_cols = ['month','dayofmonth','dayofweek', 'hour', 'minute',
             'oat[C]', 'elec_hvac[J]','solar[W/m2]', 'zone_load_rate[W]']
-
 df = df.sort_values("timestamp").drop("timestamp", axis=1)
 # new_cols = ['t_out','t_slab1','t_cav','valve_ht',
 #             'valve_cl','vfr_water','rc_y','y']
